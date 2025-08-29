@@ -1,108 +1,47 @@
 body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      transition: background 0.3s;
-    }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  transition: background 0.3s;
+}
 
-    /* ====================
-       1) MOBILE
-       ==================== */
-    @media (max-width: 767px) {
-      body {
-        background: lightgray;
-      }
-      body::after {
-        content: "MOBILE (até 767px)";
-      }
-    }
+/* 1) MOBILE */
+@media (max-width: 767px) {
+  body { background: lightgray; }
+  body::after { content: "MOBILE (até 767px)"; }
+}
+
 /* Mobile paisagem */
 @media (max-width: 767px) and (orientation: landscape) {
   body { background: lightblue; }
+  body::after { content: "MOBILE paisagem"; }
 }
 
-    /* ====================
-       2) TABLET
-       ==================== */
-/* Tablet retrato */
-    @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
-      body {
-        background: lightgreen;
-      }
-      body::after {
-        content: "TABLET ret (768px - 1023px)";
-      }
-    }
+/* 2) TABLET */
+@media (min-width: 768px) and (max-width: 1439px) and (hover: none) and (pointer: coarse) {
+  body { background: lightgreen; }
+  body::after { content: "TABLET (touch 768px - 1439px)"; }
+}
 
-/* Tablet paisagem */
-    @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
-      body {
-        background: blue;
-      }
-      body::after {
-        content: "TABLET pai (768px - 1023px)";
-      }
-    }
+/* 3) NOTEBOOK */
+@media (min-width: 1024px) and (max-width: 1439px) and (hover: hover) and (pointer: fine) {
+  body { background: orange; }
+  body::after { content: "NOTEBOOK (1024px - 1439px)"; }
+}
 
-    /* ====================
-       3) NOTEBOOK MÉDIO
-       ==================== */
-    @media (min-width: 1024px) and (max-width: 1439px) {
-      body {
-        background: orange;
-      }
-      body::after {
-        content: "NOTEBOOK (1024px - 1439px)";
-      }
-    }
+/* 4) DESKTOP GRANDE */
+@media (min-width: 1440px) and (hover: hover) and (pointer: fine) {
+  body { background: pink; }
+  body::after { content: "DESKTOP GRANDE (1440px+)"; }
+}
 
-    /* ====================
-       4) DESKTOP GRANDE
-       ==================== */
-    @media (min-width: 1440px) {
-      body {
-        background: pink;
-      }
-      body::after {
-        content: "DESKTOP GRANDE (1440px+)";
-      }
-    }
-
-    /* ====================
-       EXTRA: Diferenciar por densidade
-       ==================== */
-    @media (min-width: 768px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 2) {
-      body {
-        background: red;
-      }
-      body::after {
-        content: "TABLET Retina (768px - 1439px, DPR 2+)";
-      }
-    }
-
-    /* ====================
-       EXTRA: Diferenciar por tipo de input
-       ==================== */
-    @supports (hover: none) and (pointer: coarse) {
-      body {
-        background: lightblue;
-      }
-      body::after {
-        content: "TOUCH DEVICE (provavelmente Tablet/Celular)";
-      }
-    }
-
-    @supports (hover: hover) and (pointer: fine) {
-      body {
-        background: purple;
-        color: white;
-      }
-      body::after {
-        content: "MOUSE/TOUCHPAD (provavelmente Notebook/Desktop)";
-      }
-    }
+/* OPCIONAL: tablet Retina grande */
+@media (min-width: 1440px) and (hover: none) and (pointer: coarse) and (-webkit-min-device-pixel-ratio: 2) {
+  body { background: red; }
+  body::after { content: "TABLET Retina grande"; }
+}
