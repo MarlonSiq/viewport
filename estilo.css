@@ -1,0 +1,35 @@
+/* Base (mobile first: celular retrato) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: lightgray;
+}
+
+/* Celular paisagem (largura maior que altura) */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  body {
+    background: lightblue;
+  }
+}
+
+/* Tablet retrato */
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  body {
+    background: lightgreen;
+  }
+}
+
+/* Tablet paisagem */
+@media screen and (min-width: 768px) and (max-width: 2000px) and (orientation: landscape) {
+  body {
+    background: gold;
+  }
+}
+
+/* Desktop (paisagem) */
+@media screen and (min-width: 2001px) {
+  body {
+    background: pink;
+  }
+}
