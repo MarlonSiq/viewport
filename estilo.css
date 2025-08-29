@@ -27,6 +27,11 @@ body {
   body { background: lightgreen; }
   body::after { content: "TABLET (touch 768px - 1439px)"; }
 }
+/* Tablet Retrato */
+@media (min-width: 768px) and (max-width: 1439px) and (hover: none) and (pointer: coarse) and (orientation: portrait) {
+  body { background: lightgreen; }
+  body::after { content: "TABLET (touch 768px - 1439px)"; }
+}
 
 /* 3) NOTEBOOK */
 @media (min-width: 1024px) and (max-width: 1439px) and (hover: hover) and (pointer: fine) {
@@ -41,7 +46,7 @@ body {
 }
 
 /* OPCIONAL: tablet Retina grande */
-@media (min-width: 1440px) and (hover: none) and (pointer: coarse) and (-webkit-min-device-pixel-ratio: 2) {
+/*<!--@media (min-width: 1440px) and (hover: none) and (pointer: coarse) and (-webkit-min-device-pixel-ratio: 2) {
   body { background: red; }
   body::after { content: "TABLET Retina grande"; }
-}
+} */
