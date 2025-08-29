@@ -21,16 +21,31 @@ body {
         content: "MOBILE (até 767px)";
       }
     }
+/* Mobile paisagem */
+@media (max-width: 767px) and (orientation: landscape) {
+  body { background: lightblue; }
+}
 
     /* ====================
        2) TABLET
        ==================== */
-    @media (min-width: 768px) and (max-width: 1023px) {
+/* Tablet retrato */
+    @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
       body {
         background: lightgreen;
       }
       body::after {
-        content: "TABLET (768px - 1023px)";
+        content: "TABLET ret (768px - 1023px)";
+      }
+    }
+
+/* Tablet paisagem */
+    @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+      body {
+        background: blue;
+      }
+      body::after {
+        content: "TABLET pai (768px - 1023px)";
       }
     }
 
