@@ -63,7 +63,7 @@ body {
        ==================== */
     @media (min-width: 768px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 2) {
       body {
-        background: gold;
+        background: red;
       }
       body::after {
         content: "TABLET Retina (768px - 1439px, DPR 2+)";
