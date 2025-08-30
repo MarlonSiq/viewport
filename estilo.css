@@ -23,14 +23,16 @@ body {
 }
 
 /* 2) TABLET */
-@media (min-width: 768px) and (max-width: 1439px) and (hover: none) and (pointer: coarse) {
-  body { background: lightgreen; }
-  body::after { content: "TABLET (touch 768px - 1439px)"; }
-}
 /* Tablet Retrato */
 @media (min-width: 768px) and (max-width: 1439px) and (hover: none) and (pointer: coarse) and (orientation: portrait) {
   body { background: lightblue; }
   body::after { content: "TABLET Retrato"; }
+}
+
+/* Tablet Paisagem */
+@media (min-width: 768px) and (max-width: 1439px) and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  body { background: lightgreen; }
+  body::after { content: "TABLET Paisagem"; }
 }
 
 /* 3) NOTEBOOK */
